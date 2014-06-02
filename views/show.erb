@@ -1,0 +1,15 @@
+<h1><%= params["recipe"] %></h2>
+
+<h3>Description</h3>
+<p><%= @recipes.first["description"] %></p>
+
+<h3>Instructions</h3>
+<p><%= @recipes.first["instructions"] %></p>
+
+<h3>Ingredients</h3>
+<ul>
+  <% @recipes.each do |item| %>
+    <li><%= item["ingredients"] %></li>
+  <% end %>
+</ul>
+
